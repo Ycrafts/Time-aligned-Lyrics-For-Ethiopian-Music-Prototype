@@ -24,18 +24,19 @@ export default function Waveform({ peaks, duration, current, segments, onSeek }:
 
     for (const s of segments) {
       if (s.start === null || s.end === null) continue;
-      g.fillStyle = s.selected ? "rgba(220,120,20,0.35)" : "rgba(40,120,200,0.18)";
+      g.fillStyle = s.selected ? "rgba(255,122,24,0.38)" : "rgba(255,122,24,0.14)";
       g.fillRect((s.start / duration) * w, 0, Math.max(1, ((s.end - s.start) / duration) * w), h);
     }
-    g.fillStyle = "#33415c";
+    g.fillStyle = "#8a8a8a";
     const n = peaks.length, mid = h / 2;
     for (let x = 0; x < w; x++) {
       const p = peaks[Math.min(n - 1, Math.floor((x / w) * n))];
       const bar = Math.max(1, p * h * 0.95);
       g.fillRect(x, mid - bar / 2, 1, bar);
     }
-    g.fillStyle = "#c1121f";
+    g.fillStyle = "#ff7a18";
     g.fillRect((current / duration) * w, 0, 2, h);
+    g.fillStyle = "#ffffff"; g.fillRect((current / duration) * w, 0, 1, h);
   }, [peaks, duration, current, segments]);
 
   return (

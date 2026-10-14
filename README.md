@@ -13,6 +13,14 @@ It accompanies the paper "Time-Aligned Lyrics for Ethiopian Music: A Dataset Des
 - Tested: `npm run build` succeeds; one scripted headless-Chromium run loaded a generated WAV, tokenized Amharic text, set timestamps by typing and by playhead, and exported JSON. It has not been usability-tested with real annotators or on mobile browsers.
 - Only load recordings and lyrics you have permission to use.
 
+## Game layer (v0.2 UI)
+
+- Tap-along mode: play the song and tap (button or Space) as each word starts; E closes the last open word. This gives a rough first pass to refine.
+- A word can only be marked "checked" after you replay it with Play word.
+- XP, levels, badges and a progress ring are cosmetic and stored only in this browser (localStorage). They reward timing and checking steps, not speed, and are not payments or accuracy scores. They have not been validated as an incentive (see the paper, Section 8).
+- Karaoke-style highlight shows the word under the playhead. Animations respect the reduced-motion setting.
+- Tested: build succeeds; a scripted headless-Chromium run exercised tap-along, the replay-before-check rule, XP and JSON export. Not tested by real annotators or on mobile.
+
 ## Run locally
 
 ```bash
