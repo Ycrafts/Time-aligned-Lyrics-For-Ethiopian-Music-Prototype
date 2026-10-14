@@ -301,7 +301,7 @@ export default function App() {
         <h2><span className="step">1</span>Audio</h2>
         <label className="file">Choose audio file <input type="file" accept="audio/*" onChange={(e) => onFile(e.target.files?.[0])} /></label>
         {msg && <p className="note">{msg}</p>}
-        {url && <audio ref={audioRef} src={url} controls onLoadedMetadata={(e) => setDuration((d) => d ?? e.currentTarget.duration)} />}
+        {url && <audio ref={audioRef} src={url} controls onLoadedMetadata={(e) => { const d = e.currentTarget.duration; setDuration((p) => p ?? d); }} />}
         <Waveform peaks={peaks} duration={duration ?? 0} current={current} segments={wfSegs} onSeek={seek} />
         <div className="row">
           <span className="mono">Playhead {current.toFixed(3)} s</span>
