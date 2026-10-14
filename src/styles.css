@@ -1,0 +1,23 @@
+:root { font-family: system-ui, "Noto Sans Ethiopic", "Nyala", sans-serif; color: #1b2433; }
+body { margin: 0; background: #f6f7f9; }
+main { max-width: 960px; margin: 0 auto; padding: 16px; }
+h1 small { font-size: 0.5em; color: #b45309; border: 1px solid #b45309; border-radius: 4px; padding: 2px 6px; vertical-align: middle; }
+section { background: #fff; border: 1px solid #dde1e7; border-radius: 8px; padding: 12px 14px; margin-bottom: 14px; }
+.note { color: #4a5568; font-size: 0.9rem; }
+.waveform { width: 100%; height: 120px; background: #eef1f6; border-radius: 6px; cursor: pointer; display: block; margin: 8px 0; }
+audio { width: 100%; }
+textarea { width: 100%; box-sizing: border-box; font-size: 1.05rem; }
+.row, .editor { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-top: 8px; }
+.editor input[type=number] { width: 7.5em; }
+.noteinput { flex: 1 1 220px; }
+.lang { width: 4em; margin-left: 8px; }
+button { padding: 6px 10px; border: 1px solid #aab2c0; background: #fff; border-radius: 6px; cursor: pointer; }
+button:disabled { opacity: 0.5; cursor: default; }
+.words { display: flex; flex-wrap: wrap; gap: 6px; }
+.w { font-size: 1.1rem; }
+.w.timed { background: #dbeafe; }
+.w.reviewed { background: #d1fae5; }
+.w.uncertain { background: #fef3c7; }
+.w.sel { outline: 2px solid #d97706; }
+.issues { color: #9b1c1c; }
+@media (max-width: 600px) { main { padding: 10px; } }

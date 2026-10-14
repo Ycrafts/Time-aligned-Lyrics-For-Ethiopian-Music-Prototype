@@ -1,0 +1,12 @@
+{
+  "schema_version": "0.1",
+  "is_sample": true,
+  "generated_by": "hand-written placeholder; not produced from any recording",
+  "audio": { "file_name": "synthetic-demo.wav", "duration_s": 4.0, "sha256": null },
+  "language": "am",
+  "tokenization": "whitespace",
+  "segments": [
+    { "index": 0, "text": "ሰላም", "start": 0.42, "end": 0.91, "status": "timed", "note": "placeholder timestamps" },
+    { "index": 1, "text": "ኢትዮጵያ", "start": 1.04, "end": 1.88, "status": "timed", "note": "placeholder timestamps" }
+  ]
+}
